@@ -9,6 +9,7 @@ from django.core.mail import send_mail
 
 def index(request):
     try:
+        
         send_mail('Test Mail', 'Welcome to my Django Project', 'akshaykumardjangotest@gmail.com', ['akshayg2697@gmail.com',], fail_silently=False,)
     except:
         return HttpResponse("Mail has been sent")
